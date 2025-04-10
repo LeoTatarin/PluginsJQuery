@@ -42,6 +42,45 @@ $(document).ready(function(){
         }
     })
 
+    $('#irsobre').click(function() {
+        const irPara = $('#sobre-a-loja');
+        const deslocamento = 200;
+        $('nav').slideUp();
+
+        $('html').animate({
+            scrollTop: irPara.offset().top - deslocamento
+        }, 1000)
+    })
+
+    $('#irdestaque').click(function() {
+        const irPara = $('.em-destaque');
+        const deslocamento = 200;
+        $('nav').slideUp();
+
+        $('html').animate({
+            scrollTop: irPara.offset().top - deslocamento
+        }, 1000)
+    })
+
+    $('#irpromocao').click(function() {
+        const irPara = $('.promocao');
+        const deslocamento = 200;
+        $('nav').slideUp();
+
+        $('html').animate({
+            scrollTop: irPara.offset().top - deslocamento
+        }, 1000)
+    })
+
+    $('#ircontato').click(function() {
+        const irPara = $('#contato');
+        $('nav').slideUp();
+
+        $('html').animate({
+            scrollTop: irPara.offset().top
+        }, 1000)
+    })
+
     $('.lista-veiculos button').click(function() {
         const destino = $('#contato');
 

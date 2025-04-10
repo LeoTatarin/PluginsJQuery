@@ -7,6 +7,7 @@
 
 html{
     overflow-x: hidden;
+    background-color: rgb(224, 224, 224);
 }
 
 .container {
@@ -36,23 +37,31 @@ footer > .container{
 }
 
 nav {
-    background-color: #575fcf;
-    padding: 16px 0;
+    background-color: #060820;
+    padding: 8px 0;
     display: none;
 }
 
 nav li {
     list-style: none;
-    display: inline;
+    display: flex;
     margin-right: 16px;
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-nav li a {
-    color: #fff;
+nav .menu {
+    color: #ffffff;
     text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .menu button{
+    margin: 16px;
+    background-color: #192a56;
 }
 
 .menu-hamburguer{
@@ -108,7 +117,7 @@ section h2{
     margin: 0 5%;
 }
 
-button{
+.container button{
     display: block;
     width: 100%;
     padding: 8px 0;
