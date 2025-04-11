@@ -1,95 +1,61 @@
-$(document).ready(function(){
+$(document).ready(function () {
+
     $('#carousel-imagens').slick({
-        autoplay:true,
+        autoplay: true,
+        arrows: false
     });
 
-    $('.menu-hamburguer').click(function(){
-        $('nav').slideToggle();
-    })
 
-    $('#telefone').mask('(00) 0 0000-0000')
+    $('#telefone').mask('(00) 00000-0000', {
+        placeholder: '(DDD) 12345-6789'
+    });
+
+
+    $('#cpf').mask('000.000.000-00', {
+        placeholder: '123.456.789-00'
+    });
+
+
+    $('#cep').mask('00000-000', {
+        placeholder: '01234-567'
+    });
 
     $('form').validate({
-        rules:{
+        rules: {
             nome: {
-                required: true,
+                required: true
             },
             email: {
                 required: true,
-                email: true,
+                email: true
             },
             telefone: {
-                required: true,
+                required: true
             },
-            mensagem: {
-                required: true,
+            endereco: {
+                required: true
             },
-            veiculoInteresse: {
-                required: false,
+            cep: {
+                required: true
             },
-        },
-        messages:{
-            nome: 'Por favor, digite seu nome.'
-        },
-        submitHandler: function(form){
-            console.log(form)
-        },
-        invalidHandler: function(evento, validador){
-            let camposIncorretos = validador.numberOfInvalids();
-            if(camposIncorretos) {
-                alert(`Existem ${camposIncorretos} campos incorretos!`);
+            cpf: {
+                required: true
             }
+        },
+        messages: {
+            nome: 'Por favor, digite seu nome.',
+            email: 'Por favor, digite seu e-mail corretamente.',
+            telefone: 'Por favor, digite seu telefone.',
+            endereco: 'Por favor, digite seu endereço.',
+            cep: 'Por favor, digite seu CEP.',
+            cpf: 'Por favor, digite seu CPF.'
+        },
+        submitHandler: function (form) {
+            alert("Sua requisição foi enviada para análise, parabéns pela aquisição!");
+            form.reset();
+        },
+        invalidHandler: function (event, validator) {
+            alert("Por favor, preencha os campos corretamente para prosseguir com a compra!");
         }
-    })
-
-    $('#irsobre').click(function() {
-        const irPara = $('#sobre-a-loja');
-        const deslocamento = 200;
-        $('nav').slideUp();
-
-        $('html').animate({
-            scrollTop: irPara.offset().top - deslocamento
-        }, 1000)
-    })
-
-    $('#irdestaque').click(function() {
-        const irPara = $('.em-destaque');
-        const deslocamento = 200;
-        $('nav').slideUp();
-
-        $('html').animate({
-            scrollTop: irPara.offset().top - deslocamento
-        }, 1000)
-    })
-
-    $('#irpromocao').click(function() {
-        const irPara = $('.promocao');
-        const deslocamento = 200;
-        $('nav').slideUp();
-
-        $('html').animate({
-            scrollTop: irPara.offset().top - deslocamento
-        }, 1000)
-    })
-
-    $('#ircontato').click(function() {
-        const irPara = $('#contato');
-        $('nav').slideUp();
-
-        $('html').animate({
-            scrollTop: irPara.offset().top
-        }, 1000)
-    })
-
-    $('.lista-veiculos button').click(function() {
-        const destino = $('#contato');
-
-        const nomeVeiculo = $(this).parent().find('h3').text();
-
-        $('#veiculo-interesse').val(nomeVeiculo);
-
-        $('html').animate({
-            scrollTop: destino.offset().top
-        }, 1000)
-    })
-})
+    });
+});

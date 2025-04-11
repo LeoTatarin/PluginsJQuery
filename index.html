@@ -4,244 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tatarin Motors</title>
-    <link rel="preconnect" href="http://fonts.googleapis.com">
-    <link rel="preconnect" href="http://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./main.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-
+    <title>Formulário de Cadastro - Módulo 10</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 </head>
+<!--
+
+    CONSULTEM O README PARA DICAS DE COMO SOLUCIONAR O EXERCÍCIO!
+
+-->
 
 <body>
     <header>
-        <div class="container container-flex">
-            <h1>TATARIN Motors</h1>
-            <div class="menu-hamburguer">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <nav>
-            <div class="container menu">
-                        <button href="irsobre" id="irsobre">Sobre</button>
-                        <button href="irdestaque" id="irdestaque">Em destaque</button>
-                        <button href="irpromocao" id="irpromocao">Promoções</button>
-                        <button href="ircontato" id="ircontato">Contato</button>
-            </div>
-        </nav> 
+        <h1>Adquira seu veículo agora mesmo!</h1>
     </header>
+
     <div id="carousel-imagens">
-        <img src ="images/slide1.png" alt = "Carro da Porche">
-        <img src ="images/slide2.png" alt = "Carro da BMW">
-        <img src ="images/slide3.png" alt = "Carro da Ford">
+        <img src="./assets/slide1.png" alt="Carro da Porsche">
+        <img src="./assets/slide2.png" alt="Carro da BMW">
+        <img src="./assets/slide3.png" alt="Carro da Ford">
     </div>
 
-    <section id="sobre-a-loja">
-        <div class="container container-flex">
-            <img src = "./images/loja.jpg" alt = "Imagem da loja EBAC Motors">
-            <div>
-                <h2>Sobre a Tatarin Motors</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse nisi velit excepturi cumque, dolor repudiandae quae ratione, enim iste reiciendis modi autem saepe? Accusantium, assumenda iste. Voluptatem voluptas odit sed.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse commodi iure qui officia aut corporis magnam consequuntur illo laborum voluptatibus nam, provident repellat, a voluptate blanditiis cupiditate saepe eaque? Iusto?
-                </p>
+    <div class="container">
+        <h2>Insira seus dados para finalização da compra</h2>
+        <form id="form">
+            <div class="form-campo">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome" placeholder="John Doe">
             </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="container em-destaque">
-            <h2>Em Destaque</h2>
-            <ul class="container-flex lista-veiculos">
-                <li>
-                    <img src="./images/nissan gtr.jpg" alt="carro-gtr">
-                    <h3>Nissan GT-R</h3>
-                    <p>
-                        Motor V6 3.8 Litros, 570 cv
-                    </p>
-                    <strong>R$ 985.850,00</strong>
-                    <button type="button">Tenho Interesse</button>
-                </li>
-                <li class="item-central">
-                    <img src="./images/porsche718.jpeg" alt="carro-porche">
-                    <h3>Porche 718</h3>
-                    <p>
-                        GTS 4.0, Boxter 6 cilindros, 400 cv
-                    </p>
-                    <strong>R$ 772.820,00</strong>
-                    <button type="button">Tenho Interesse</button>
-                </li>
-                <li>
-                    <img src="./images/moto-bmw.png" alt="moto-bmw">
-                    <h3>Moto BMW</h3>
-                    <p>
-                        Cambio automatico, 1300 cilindradas
-                    </p>
-                    <strong>R$ 250.590,00</strong>
-                    <button type="button">Tenho Interesse</button>
-                </li>
-                <li>
-                    <img src="./images/ferrari.jpg" alt="ferrari">
-                    <h3>Ferrari 458 Italia</h3>
-                    <p>
-                        Motor V8 de 4,5 Litros, 570 cv
-                    </p>
-                    <strong>R$ 2.899.540,00</strong>
-                    <button type="button">Tenho Interesse</button>
-                </li>
-                <li class="item-central">
-                    <img src="./images/mercedes.jpg" alt="mercedes">
-                    <h3>Mercedes G63 AMG</h3>
-                    <p>
-                        Motor V8 biturbo 4,0 litros, 585 cv
-                    </p>
-                    <strong>R$ 2.105.050,00</strong>
-                    <button type="button">Tenho Interesse</button>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <div class="container promocao">
-            <h2>Promoções</h2>
-            <ul class="container-flex lista-veiculos">
-                <li>
-                    <img src="./images/carro-bmw.png" alt="carro-bmw">
-                    <h3>Carro BMW</h3>
-                    <p>
-                        coupe, conversivel, 350 cv
-                    </p>
-                    <div class="price">
-                        <del>R$ 380.000,00</del>
-                        <strong>R$ 320.585,00</strong>
-                    </div>
-                    <button type="button">Tenho Interesse</button>
-                </li>
-                <li class="item-central">
-                    <img src="./images/fusca.png" alt="carro-fusca">
-                    <h3>Fusca Original</h3>
-                    <p>
-                        placa preta, motor 1300, ano 1974
-                    </p>
-                    <div class="price">
-                        <del>R$ 42.790,00</del>
-                        <strong>R$ 37.420,00</strong>
-                    </div>
-                    <button type="button">Tenho Interesse</button>
-                </li>
-                <li>
-                    <img src="./images/toyota.jpg" alt="carro toyota">
-                    <h3>Toyota RAV4</h3>
-                    <p>
-                        Cambio automatico, 2.5L, 178cv 
-                    </p>
-                    <div class="price">
-                        <del>R$ 340.290,00</del>
-                        <strong>R$ 312.500,00</strong>
-                    </div>
-                    <button type="button">Tenho Interesse</button>
-                </li>
-                <li>
-                    <img src="./images/golf.webp" alt="carro-golf">
-                    <h3>Golf GTI</h3>
-                    <p>
-                        2.0 TSI, 265 cv, 41,5 kgfm
-                    </p>
-                    <div class="price">
-                        <del>R$ 400.250,00</del>
-                        <strong>R$ 387,955,00</strong>
-                    </div>
-                    <button type="button">Tenho Interesse</button>
-                </li>
-                <li class="item-central">
-                    <img src="./images/range.jpg" alt="carro-range">
-                    <h3>Range Rover Evoque</h3>
-                    <p>
-                        2.0L Turbo, 240 cv
-                    </p>
-                    <div class="price">
-                        <del>R$ 486.050,00,00</del>
-                        <strong>R$ 469.899,00</strong>
-                    </div>
-                    <button type="button">Tenho Interesse</button>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="contato">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            <form>
-                <div class="form-campo">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome">
-                </div>
-
-                <div class="form-campo">
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone"  name="telefone">
-                </div>
-
-                <div class="form-campo">
-                    <label for="email">E-Mail</label>
-                    <input type="email" id="email" name="email">
-                </div>
-
-                <div class="form-campo">
-                    <label for="veiculo-interesse">Veiculo de Interesse</label>
-                    <input type="text" id="veiculo-interesse" name="veiculoInteresse">
-                </div>
-
-                <div class="form-campo">
-                    <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem"></textarea>
-                </div>
-
-                <div class="form-campo">
-                    <button type="submit">Enviar</button>
-                </div>
-
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container container-flex">
-            <p>2025 &copy; TATARIN Motors - Todos os direitos reservados</p>
-            <ul class="container-flex">
-                <li>
-                    <a href="#">
-                        <img src="./icones/facebook.png" alt="facebook">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./icones/instagram.png" alt="instagram">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="./icones/youtube.png" alt="youtube">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </footer>
+            <div class="form-campo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="email@exemplo.com">
+            </div>
+            <div class="form-campo">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone">
+            </div>
+            <div class="form-campo">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf">
+            </div>
+            <div class="form-campo">
+                <label for="endereco">Endereço completo</label>
+                <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro, cidade, estado">
+            </div>
+            <div class="form-campo">
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" name="cep">
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/messages_pt_BR.min.js"></script>
     <script src="./js/jquery.mask.min.js"></script>
     <script src="./js/jquery.validate.min.js"></script>
-    <script src="./js/messages_pt_BR.min.js"></script>
-
     <script src="./js/main.js"></script>
 </body>
 
